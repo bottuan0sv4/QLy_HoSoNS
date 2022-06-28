@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLy_filehoso" Class="QLy_filehosonhansuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HI\SQLEXPRESS;Initial Catalog=QLy_filehoso;Integrated Security=True" SettingsObjectName="QLy_filehosonhansu.Properties.Settings" SettingsPropertyName="QLy_filehosoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.NS_FILE_HOSO" Member="NS_FILE_HOSOs">
+    <Type Name="NS_FILE_HOSO">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDHOSONHANSU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenFile" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DuongDan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="DungLuong" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="KieuFile" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="NS_HOSONHANSU_NS_FILE_HOSO" Member="NS_HOSONHANSU" ThisKey="IDHOSONHANSU" OtherKey="ID" Type="NS_HOSONHANSU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NS_HOSONHANSU" Member="NS_HOSONHANSUs">
+    <Type Name="NS_HOSONHANSU">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaNS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HovaTen" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="SoCMND" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="NS_HOSONHANSU_NS_FILE_HOSO" Member="NS_FILE_HOSOs" ThisKey="ID" OtherKey="IDHOSONHANSU" Type="NS_FILE_HOSO" />
+    </Type>
+  </Table>
+</Database>
