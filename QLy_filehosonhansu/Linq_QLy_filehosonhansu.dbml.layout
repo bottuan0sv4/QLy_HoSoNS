@@ -2,23 +2,23 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLy_filehosonhansu">
   <DataContextMoniker Name="/QLy_filehosonhansuDataContext" />
   <nestedChildShapes>
-    <classShape Id="5a5ee6f4-5116-4ce8-ad5f-b9875459e7aa" absoluteBounds="3.5, 1, 2, 2.1554996744791666">
+    <classShape Id="3d4f4289-25ed-4e80-9f29-f4c20222e233" absoluteBounds="3.5, 1.125, 2, 1.9631982421875003">
       <DataClassMoniker Name="/QLy_filehosonhansuDataContext/NS_FILE_HOSO" />
       <nestedChildShapes>
-        <elementListCompartment Id="35438ee1-78af-4218-9380-6fda546f952f" absoluteBounds="3.515, 1.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8d363fc8-f412-473f-a95f-8a65575171eb" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="21028284-3841-4f9c-bf7d-1bdc0b4b8e6a" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
+    <classShape Id="c7a51471-82d7-431e-9fca-6015648e39ae" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
       <DataClassMoniker Name="/QLy_filehosonhansuDataContext/NS_HOSONHANSU" />
       <nestedChildShapes>
-        <elementListCompartment Id="87d556bf-d1c9-4dc3-8a35-71a93fc2ddfb" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="49bce6c2-e739-46ee-bd49-60675c8d253c" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.75 : 2.07774983723958); (3.5 : 2.07774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.10659912109375); (3.5 : 2.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <AssociationMoniker Name="/QLy_filehosonhansuDataContext/NS_HOSONHANSU/NS_HOSONHANSU_NS_FILE_HOSO" />
       <nodes>
-        <classShapeMoniker Id="21028284-3841-4f9c-bf7d-1bdc0b4b8e6a" />
-        <classShapeMoniker Id="5a5ee6f4-5116-4ce8-ad5f-b9875459e7aa" />
+        <classShapeMoniker Id="c7a51471-82d7-431e-9fca-6015648e39ae" />
+        <classShapeMoniker Id="3d4f4289-25ed-4e80-9f29-f4c20222e233" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

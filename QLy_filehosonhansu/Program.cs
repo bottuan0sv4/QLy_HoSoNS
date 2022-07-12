@@ -16,7 +16,8 @@ namespace QLy_filehosonhansu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main());
+            Application.Run(new frmHoSo());
+           
         }
     }
 }

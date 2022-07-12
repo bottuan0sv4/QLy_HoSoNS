@@ -1,0 +1,20 @@
+1	Cập nhật hồ sơ nhân sự
+2	Cập nhật file hồ sơ đính kèm (chỉ chấp nhận file PDF, WORD, IMAGE)
+3	Có thể xem file hồ sơ
+4	File dữ liệu lưu trên máy chủ
+5	Xây dựng webservice upload file
+
+
+------------------------------------------------------------------------------------------------------------------------
+Hiểu:
+
+1	Mỗi nhân sự sẽ có các file hồ sơ đính kèm load lên từ máy(hạn chế loại fille)
+{
+	1	Có form cập nhật hồ sơ nhân sự
+	2	Có nút choose file => sẽ có tên file
+	3	Khi lưu => load đường link
+}
+2	Khi ấn lưu sẽ up file hồ sơ đính kèm lên webservice
+3	Khi chỉnh sửa sẽ update lại lên webservice
+4	CSDL lưu trữ hồ sơ nhân sự, tên file , link file hồ sơ đính kèm.
+5	Nếu truy cập link sẽ thấy được file đính kèm

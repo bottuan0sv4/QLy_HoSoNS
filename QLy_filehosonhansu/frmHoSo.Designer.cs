@@ -40,7 +40,6 @@ namespace QLy_filehosonhansu
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
-            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             this.gc_HSNhanSu = new DevExpress.XtraGrid.GridControl();
             this.gv_HSNhanSu = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,20 +50,21 @@ namespace QLy_filehosonhansu
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             this.gc_FileDinhKem = new DevExpress.XtraGrid.GridControl();
             this.gv_FileDinhKem = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.stt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.sidePanel1.SuspendLayout();
-            this.sidePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_HSNhanSu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_HSNhanSu)).BeginInit();
+            this.sidePanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_FileDinhKem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FileDinhKem)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +129,7 @@ namespace QLy_filehosonhansu
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(800, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(1039, 30);
             // 
             // barDockControlBottom
             // 
@@ -137,7 +137,7 @@ namespace QLy_filehosonhansu
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 620);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(800, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1039, 0);
             // 
             // barDockControlLeft
             // 
@@ -151,7 +151,7 @@ namespace QLy_filehosonhansu
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(800, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1039, 30);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 590);
             // 
@@ -161,19 +161,9 @@ namespace QLy_filehosonhansu
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel1.Location = new System.Drawing.Point(0, 30);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(800, 229);
+            this.sidePanel1.Size = new System.Drawing.Size(1039, 322);
             this.sidePanel1.TabIndex = 9;
             this.sidePanel1.Text = "sidePanel1";
-            // 
-            // sidePanel2
-            // 
-            this.sidePanel2.Controls.Add(this.gc_FileDinhKem);
-            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sidePanel2.Location = new System.Drawing.Point(0, 259);
-            this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(800, 361);
-            this.sidePanel2.TabIndex = 10;
-            this.sidePanel2.Text = "sidePanel2";
             // 
             // gc_HSNhanSu
             // 
@@ -182,7 +172,7 @@ namespace QLy_filehosonhansu
             this.gc_HSNhanSu.MainView = this.gv_HSNhanSu;
             this.gc_HSNhanSu.MenuManager = this.barManager1;
             this.gc_HSNhanSu.Name = "gc_HSNhanSu";
-            this.gc_HSNhanSu.Size = new System.Drawing.Size(800, 228);
+            this.gc_HSNhanSu.Size = new System.Drawing.Size(1039, 321);
             this.gc_HSNhanSu.TabIndex = 6;
             this.gc_HSNhanSu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_HSNhanSu});
@@ -201,7 +191,6 @@ namespace QLy_filehosonhansu
             this.gv_HSNhanSu.GridControl = this.gc_HSNhanSu;
             this.gv_HSNhanSu.Name = "gv_HSNhanSu";
             this.gv_HSNhanSu.OptionsBehavior.Editable = false;
-            this.gv_HSNhanSu.OptionsView.ShowAutoFilterRow = true;
             this.gv_HSNhanSu.OptionsView.ShowDetailButtons = false;
             this.gv_HSNhanSu.OptionsView.ShowGroupPanel = false;
             this.gv_HSNhanSu.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gv_HSNhanSu_FocusedRowChanged);
@@ -288,6 +277,16 @@ namespace QLy_filehosonhansu
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 94;
             // 
+            // sidePanel2
+            // 
+            this.sidePanel2.Controls.Add(this.gc_FileDinhKem);
+            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sidePanel2.Location = new System.Drawing.Point(0, 352);
+            this.sidePanel2.Name = "sidePanel2";
+            this.sidePanel2.Size = new System.Drawing.Size(1039, 268);
+            this.sidePanel2.TabIndex = 10;
+            this.sidePanel2.Text = "sidePanel2";
+            // 
             // gc_FileDinhKem
             // 
             this.gc_FileDinhKem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -295,7 +294,7 @@ namespace QLy_filehosonhansu
             this.gc_FileDinhKem.MainView = this.gv_FileDinhKem;
             this.gc_FileDinhKem.MenuManager = this.barManager1;
             this.gc_FileDinhKem.Name = "gc_FileDinhKem";
-            this.gc_FileDinhKem.Size = new System.Drawing.Size(800, 361);
+            this.gc_FileDinhKem.Size = new System.Drawing.Size(1039, 268);
             this.gc_FileDinhKem.TabIndex = 0;
             this.gc_FileDinhKem.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_FileDinhKem});
@@ -304,7 +303,7 @@ namespace QLy_filehosonhansu
             // 
             this.gv_FileDinhKem.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn12,
-            this.gridColumn9,
+            this.stt,
             this.gridColumn10,
             this.gridColumn11,
             this.gridColumn13,
@@ -313,19 +312,26 @@ namespace QLy_filehosonhansu
             this.gv_FileDinhKem.GridControl = this.gc_FileDinhKem;
             this.gv_FileDinhKem.Name = "gv_FileDinhKem";
             this.gv_FileDinhKem.OptionsBehavior.Editable = false;
-            this.gv_FileDinhKem.OptionsView.ShowAutoFilterRow = true;
             this.gv_FileDinhKem.OptionsView.ShowDetailButtons = false;
             this.gv_FileDinhKem.OptionsView.ShowGroupPanel = false;
+            this.gv_FileDinhKem.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gv_FileDinhKem_CustomDrawCell);
             // 
-            // gridColumn9
+            // gridColumn12
             // 
-            this.gridColumn9.Caption = "STT";
-            this.gridColumn9.FieldName = "STT";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 0;
-            this.gridColumn9.Width = 62;
+            this.gridColumn12.Caption = "ID";
+            this.gridColumn12.FieldName = "ID";
+            this.gridColumn12.MinWidth = 25;
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Width = 94;
+            // 
+            // stt
+            // 
+            this.stt.Caption = "STT";
+            this.stt.MinWidth = 25;
+            this.stt.Name = "stt";
+            this.stt.Visible = true;
+            this.stt.VisibleIndex = 0;
+            this.stt.Width = 62;
             // 
             // gridColumn10
             // 
@@ -340,20 +346,11 @@ namespace QLy_filehosonhansu
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Đường Link";
-            this.gridColumn11.FieldName = "DuongDan";
             this.gridColumn11.MinWidth = 25;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 2;
             this.gridColumn11.Width = 535;
-            // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "ID";
-            this.gridColumn12.FieldName = "ID";
-            this.gridColumn12.MinWidth = 25;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Width = 94;
             // 
             // gridColumn13
             // 
@@ -383,7 +380,7 @@ namespace QLy_filehosonhansu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 620);
+            this.ClientSize = new System.Drawing.Size(1039, 620);
             this.Controls.Add(this.sidePanel2);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.barDockControlLeft);
@@ -392,14 +389,16 @@ namespace QLy_filehosonhansu
             this.Controls.Add(this.barDockControlTop);
             this.KeyPreview = true;
             this.Name = "frmHoSo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hồ Sơ Nhân Sự";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoSoNhanSu_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmHoSoNhanSu_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.sidePanel1.ResumeLayout(false);
-            this.sidePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_HSNhanSu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_HSNhanSu)).EndInit();
+            this.sidePanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_FileDinhKem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_FileDinhKem)).EndInit();
             this.ResumeLayout(false);
@@ -421,7 +420,7 @@ namespace QLy_filehosonhansu
         private DevExpress.XtraEditors.SidePanel sidePanel2;
         private DevExpress.XtraGrid.GridControl gc_FileDinhKem;
         private DevExpress.XtraGrid.Views.Grid.GridView gv_FileDinhKem;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn stt;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraEditors.SidePanel sidePanel1;

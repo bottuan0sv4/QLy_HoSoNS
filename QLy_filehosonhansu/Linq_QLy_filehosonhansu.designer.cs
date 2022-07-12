@@ -39,7 +39,7 @@ namespace QLy_filehosonhansu
     #endregion
 		
 		public QLy_filehosonhansuDataContext() : 
-				base(global::QLy_filehosonhansu.Properties.Settings.Default.QLy_filehosoConnectionString, mappingSource)
+				base(global::QLy_filehosonhansu.Properties.Settings.Default.QLy_filehosoConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -93,8 +93,6 @@ namespace QLy_filehosonhansu
 		
 		private int _ID;
 		
-		private int _STT;
-		
 		private int _IDHOSONHANSU;
 		
 		private string _TenFile;
@@ -113,8 +111,6 @@ namespace QLy_filehosonhansu
     partial void OnCreated();
     partial void OnIDChanging(int value);
     partial void OnIDChanged();
-    partial void OnSTTChanging(int value);
-    partial void OnSTTChanged();
     partial void OnIDHOSONHANSUChanging(int value);
     partial void OnIDHOSONHANSUChanged();
     partial void OnTenFileChanging(string value);
@@ -149,26 +145,6 @@ namespace QLy_filehosonhansu
 					this._ID = value;
 					this.SendPropertyChanged("ID");
 					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STT", DbType="Int NOT NULL")]
-		public int STT
-		{
-			get
-			{
-				return this._STT;
-			}
-			set
-			{
-				if ((this._STT != value))
-				{
-					this.OnSTTChanging(value);
-					this.SendPropertyChanging();
-					this._STT = value;
-					this.SendPropertyChanged("STT");
-					this.OnSTTChanged();
 				}
 			}
 		}

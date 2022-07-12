@@ -23,7 +23,6 @@ namespace QLy_filehosonhansu.Class
     public class FileDinhKem
     {
         public int IDFile { get; set; }
-        public int STT { get; set; }
         public int IDHOSONHANSU { get; set; }
         public string TenFile { get; set; }
         public string DuongDan { get; set; }

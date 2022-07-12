@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLy_filehoso" Class="QLy_filehosonhansuDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=HI\SQLEXPRESS;Initial Catalog=QLy_filehoso;Integrated Security=True" SettingsObjectName="QLy_filehosonhansu.Properties.Settings" SettingsPropertyName="QLy_filehosoConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-1N9EL1I\SQLEXPRESS;Initial Catalog=QLy_filehoso;Integrated Security=True" SettingsObjectName="QLy_filehosonhansu.Properties.Settings" SettingsPropertyName="QLy_filehosoConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.NS_FILE_HOSO" Member="NS_FILE_HOSOs">
     <Type Name="NS_FILE_HOSO">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="STT" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IDHOSONHANSU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TenFile" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="DuongDan" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />

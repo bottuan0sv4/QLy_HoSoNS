@@ -9,6 +9,7 @@ namespace QLy_filehosonhansu
     public partial class frmHoSo : Form
     {
         private QLy_filehosonhansuDataContext db = new QLy_filehosonhansuDataContext();
+        Service.WebService wbService = new Service.WebService();
 
         public frmHoSo()
         {
@@ -18,17 +19,20 @@ namespace QLy_filehosonhansu
         {
             db = new QLy_filehosonhansuDataContext();
             var list = (from p in db.NS_HOSONHANSUs
-                       select new HSNhanSu
-                       {
-                           ID = p.ID,
-                           MaNS = p.MaNS,
-                           HovaTen = p.HovaTen,
-                           NgaySinh = p.NgaySinh,
-                           SoCMND = p.SoCMND,
-                           SoDienThoai = p.SoDienThoai,
-                           DiaChi = p.DiaChi,
-                           Email = p.Email
-                       }).OrderBy(x => x.ID);
+                        
+                        select new HSNhanSu
+                        {
+                            ID = p.ID,
+                            MaNS = p.MaNS,
+                            HovaTen = p.HovaTen,
+                            NgaySinh = p.NgaySinh,
+                            SoCMND = p.SoCMND,
+                            SoDienThoai = p.SoDienThoai,
+                            DiaChi = p.DiaChi,
+                            Email = p.Email,
+                            
+                        }
+                        ).OrderBy(x => x.ID);
             gc_HSNhanSu.DataSource = list;
             gc_HSNhanSu.RefreshDataSource();
         }
@@ -50,19 +54,16 @@ namespace QLy_filehosonhansu
         {
             frmCapNhatHS th = new frmCapNhatHS();
             th.them = false;
-            th.xoa = false;
-            th.hsNhanSu = (NS_HOSONHANSU)gv_HSNhanSu.GetFocusedRow();
+            th.hsNhanSu = gv_HSNhanSu.GetFocusedRow() as HSNhanSu;
             th.ShowDialog();
             dataload();
         }
 
         private void bt_Xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmCapNhatHS th = new frmCapNhatHS();
-            th.them = false;
-            th.xoa = true;
-            th.hsNhanSu = (NS_HOSONHANSU)gv_HSNhanSu.GetFocusedRow();
-            th.ShowDialog();
+            frmXacNhanXoaHS f = new frmXacNhanXoaHS();
+            f.xoaHS = gv_HSNhanSu.GetFocusedRow() as HSNhanSu;
+            f.ShowDialog();
             dataload();
         }
 
@@ -81,7 +82,6 @@ namespace QLy_filehosonhansu
                         select new FileDinhKem
                         {
                             IDFile = c.ID,
-                            STT = c.STT,
                             IDHOSONHANSU = p.ID,
                             TenFile = c.TenFile,
                             DuongDan = c.DuongDan,
@@ -90,6 +90,14 @@ namespace QLy_filehosonhansu
                         }).OrderBy(x => x.IDHOSONHANSU);
             gc_FileDinhKem.DataSource = list;
             gc_FileDinhKem.RefreshDataSource();
+        }
+
+        private void gv_FileDinhKem_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column == stt)
+            {
+                e.DisplayText = Convert.ToString(e.RowHandle + 1);
+            }
         }
     }
 }

@@ -44,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,11 +70,17 @@
     <Compile Include="frmHoSo.Designer.cs">
       <DependentUpon>frmHoSo.cs</DependentUpon>
     </Compile>
-    <Compile Include="main.cs">
+    <Compile Include="frmSuaFileHS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main.Designer.cs">
-      <DependentUpon>main.cs</DependentUpon>
+    <Compile Include="frmSuaFileHS.Designer.cs">
+      <DependentUpon>frmSuaFileHS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXacNhanXoaHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXacNhanXoaHS.Designer.cs">
+      <DependentUpon>frmXacNhanXoaHS.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,11 +89,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Linq_QLy_filehosonhansu.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Web References\Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmCapNhatHS.resx">
       <DependentUpon>frmCapNhatHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHoSo.resx">
       <DependentUpon>frmHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaFileHS.resx">
+      <DependentUpon>frmSuaFileHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXacNhanXoaHS.resx">
+      <DependentUpon>frmXacNhanXoaHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -98,9 +117,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="main.resx">
-      <DependentUpon>main.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="Properties\DataSources\QLy_filehosonhansu.Class.FileDinhKem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +135,11 @@
     <None Include="Linq_QLy_filehosonhansu.dbml.layout">
       <DependentUpon>Linq_QLy_filehosonhansu.dbml</DependentUpon>
     </None>
+    <None Include="Web References\Service\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Service\WebService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -157,6 +179,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\actions_forbid.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://localhost:44377/WebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Service\</RelPath>
+      <UpdateFromURL>https://localhost:44377/WebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>QLy_filehosonhansu_Service_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Service\WebService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

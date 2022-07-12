@@ -32,5 +32,26 @@ namespace QLy_filehosonhansu.Properties {
                 return ((string)(this["QLy_filehosoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-1N9EL1I\\SQLEXPRESS;Initial Catalog=QLy_filehoso;Integrated Se" +
+            "curity=True")]
+        public string QLy_filehosoConnectionString1 {
+            get {
+                return ((string)(this["QLy_filehosoConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44377/WebService.asmx")]
+        public string QLy_filehosonhansu_Service_WebService {
+            get {
+                return ((string)(this["QLy_filehosonhansu_Service_WebService"]));
+            }
+        }
     }
 }
